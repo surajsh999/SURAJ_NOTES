@@ -63,17 +63,22 @@ dd - delete the line
 p - paste  
 :%d - to clear all data    
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+_________________
 
+12/3
+----
 
+grep - global / regular expression search /and print  
 
+used for searching and manipulating text patterns within files  
 
+grep -i "unix" file.txt  
+grep grep -on "rsvp" file.txt (-o only match)  
 
-
-
-
-
-
+-o, --only-matching  
+-i, --ignore-case  
+-n, --line-number  
+-c, --count  
 
 
 
