@@ -68,6 +68,9 @@ _________________
 12/3
 ----
 
+GREP
+----
+
 grep - global / regular expression search /and print  
 
 used for searching and manipulating text patterns within files  
