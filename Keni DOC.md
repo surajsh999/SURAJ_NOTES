@@ -82,6 +82,7 @@ grep grep -on "rsvp" file.txt (-o only match)
 -i, --ignore-case  
 -n, --line-number  
 -c, --count  
+-r, --recursive
 
 grip -i "mailbox_register" file.txt
 grep -inc "rsvp" file.txt
