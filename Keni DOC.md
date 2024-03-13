@@ -83,10 +83,24 @@ grep grep -on "rsvp" file.txt (-o only match)
 -n, --line-number  
 -c, --count  
 
-
+grip -i "mailbox_register" file.txt
+grep -inc "rsvp" file.txt
+grep -in "rsvp" file.txt
+grep -v "rsvp" file.txt
+grep -vc "rsvp" file.txt
+grep -o "rsvp" file.txt
+grep 08:51:06.*mailbox allocated file.txt
+grep "start.*end" file.txt
+grep -ir "info" /kani
+grep -irn "info" /kani
+grep -e "start" -e "end" file1.txt
 
 sed
 ---
+sed 's/mailbox_create/newword/g' file.txt
+sed -n '1,10p' file.txt
+sed '1,10d' file.txt
+
 -i	sed -ibak 's/On/Off/' php.ini	 Backup and modify input file directly  
 -E	sed -E 's/[0-9]+//g'             input-file	Use extended regular expressions  
 -n	sed -n '3 p' config.conf       	Suppress default pattern space printing  
