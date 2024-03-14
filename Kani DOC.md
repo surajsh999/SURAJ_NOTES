@@ -145,7 +145,7 @@ sed 's/\w+/\L&/g' file.txt                     # Lowercase all words
 sed 's/\w+/\U&/g' file.txt                     # Uppercase all words                                                                   
 sed 's/.*/\L&/; s/\<./\U&/g' file.txt          # Capitalize first letter of each word                                                  
 																																	   
-#### Using regular expressions                                                                                                            
+###### Using regular expressions                                                                                                            
 																																	   
 sed 's/[^a-zA-Z]//g' file.txt                  # Remove all non-alphabetic characters                                                  
 sed 's/\(hello\)\(world\)/\2\1/g' file.txt     # Swap 'hello' and 'world'     
