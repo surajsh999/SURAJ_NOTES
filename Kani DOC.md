@@ -109,42 +109,42 @@ sed '1,10d' file.txt
 -f	sed -f script.sed config.conf	Execute sed script file                                                                           
 -e	sed -e 'command1' -e 'command2' input-file	Execute multiple sed commands                                                         
 																																	  
-# Substitute/Replace                                                                                                                  
+#### Substitute/Replace                                                                                                                  
 																																	  
 sed 's/pattern/replace_string/' file.txt       # Replace 'pattern' with 'replace_string' in file.txt                                  
 sed 's/pattern/replace_string/g' file.txt      # Replace all occurrences of 'pattern' with 'replace_string' in file.txt               
 sed 's/pattern/replace_string/2' file.txt      # Replace the 2nd occurrence of 'pattern' with 'replace_string' in file.txt            
 sed 's/pattern/&_&/' file.txt                  # Duplicate 'pattern' and insert '_' in between (pattern_pattern)                      
 																																	  
-# In-place editing                                                                                                                    
+#### In-place editing                                                                                                                    
 																																	  
 sed -i 's/pattern/replace_string/g' file.txt   # Replace all occurrences of 'pattern' with 'replace_string' in-place                   
 sed -i 's/pattern/replace_string/3g' file.txt  # Replace only the 3rd occurrence of 'pattern' with 'replace_string' in-place           
 																																	   
-# Delete lines                                                                                                                         
+#### Delete lines                                                                                                                         
 																																	   
 sed '/pattern/d' file.txt                      # Delete lines matching 'pattern'                                                       
 sed '/^$/d' file.txt                           # Delete blank lines                                                                    
 																																	   
-# Insert/Append lines                                                                                                                  
+#### Insert/Append lines                                                                                                                  
 																																	   
 sed '3r file_to_read' file.txt                 # Read contents of file_to_read and insert after line 3                                 
 sed '3i new_line' file.txt                     # Insert 'new_line' after line 3                                                        
 sed '3a new_line' file.txt                     # Append 'new_line' after line 3                                                        
 																																	   
-# Print lines                                                                                                                          
+#### Print lines                                                                                                                          
 																																	   
 sed -n '/pattern/p' file.txt                   # Print lines matching 'pattern'                                                        
 sed -n '3,5p' file.txt                         # Print lines 3 to 5                                                                    
 sed -n '3p;4q' file.txt                        # Print line 3 and quit after line 4                                                    
 																																	   
-# Transform cases                                                                                                                      
+#### Transform cases                                                                                                                      
 																																	   
 sed 's/\w+/\L&/g' file.txt                     # Lowercase all words                                                                   
 sed 's/\w+/\U&/g' file.txt                     # Uppercase all words                                                                   
 sed 's/.*/\L&/; s/\<./\U&/g' file.txt          # Capitalize first letter of each word                                                  
 																																	   
-# Using regular expressions                                                                                                            
+#### Using regular expressions                                                                                                            
 																																	   
 sed 's/[^a-zA-Z]//g' file.txt                  # Remove all non-alphabetic characters                                                  
 sed 's/\(hello\)\(world\)/\2\1/g' file.txt     # Swap 'hello' and 'world'     
